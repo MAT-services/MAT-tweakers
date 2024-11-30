@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <title>MAT Tweaks (beta)</title>
+        <hta:application 
+            id="MATweakers" 
+            applicationname="MAT Tweakers" 
+            navigable="yes"
+            icon="ICON.ico"
+            selection="no"
+        />
+        <script>var objShell = new ActiveXObject("WScript.Shell");</script>
+        <style>
+            table {
+                width: 100%;
+                border-collapse: collapse;
+            }
+            td {
+                background-color: lightgray;
+                padding: 20px;
+                border: 1px solid #696969;
+            }
+            .col1 {
+                width: 25%;
+                vertical-align: top;
+            }
+            .col2 {
+                width: 75%;
+            }
+        </style>
+    </head>
+    <body>
+        <table>
+            <tr>
+                <td class="col1">
+                    Acceuil<br>
+                    📂 Offline Tweaks<br>
+                    |-> explorer context menu<br>
+                    |<a style="color: lightgray;">. . .</a>\-> <a href=".\tweaks\ECM\newfile.hta" >Add/Remove New file</a><br>
+                    \-> Startup<br>
+                    <a style="color: lightgray;">|. . .</a>\-> <a href=".\tweaks\Startup\shell.hta" >Application de "shell"</a><br>
+                    <a style="color:blue; text-decoration: underline;" onclick="objShell.run('online.hta')">🌐 Online Tweaks</a>
+                </td>
+                <td class="col2">
+                    <h1><img src="ICON.ico">MAT Tweaks</h1>Bienvenu sur le logiciel de modification avancée de Windows développé par les <u><a onclick="objShell.Run('msedge https://sites.google.com/view/mat-online-website');">Services MAT</a></u>!<br><br>
+                    En utilisant ce logiciel, vous avez pris connaissance de nos condissions d'utilisations et droits d'autheur. (Voir site internet.)<br>
+                    <a style="color:red"><u>/!\ RAPPEL</u>: Nous ne sommes en AUCUN cas considérés responsables des modifications et éventuels problèmes apportés a cet ordinateur, mème en présence de nos applications!</a>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

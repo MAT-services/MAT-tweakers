@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <title>MAT Tweaks (beta) - Add/Remove New file </title>
+        <hta:application 
+        id="MATweakers" 
+        applicationname="MAT Tweakers" 
+        navigable="yes"
+        icon="ICON.ico"
+        />
+        <script>
+            var objShell = new ActiveXObject("WScript.Shell");
+            var objShellApp = new ActiveXObject("Shell.Application")
+        </script>
+        <style>
+            table {
+                width: 100%;
+                border-collapse: collapse;
+            }
+            td {
+                background-color: lightgray;
+                padding: 20px;
+                border: 1px solid #696969;
+            }
+            .col1 {
+                width: 25%;
+                vertical-align: top;
+            }
+            .col2 {
+                width: 75%;
+            }
+        </style>
+    </head>
+    <body>
+        <table>
+            <tr>
+                <td class="col1">
+                    <a href="../../index.hta">Acceuil</a><br>
+                    📂 Offline Tweaks<br>
+                    |-> explorer context menu<br>
+                    |<a style="color: lightgray;">. . .</a>\-> <a href="..\ECM\newfile.hta" >Add/Remove New file</a><br>
+                    \-> Startup<br>
+                    <a style="color: lightgray;">|. . .</a>\-> Application de "shell"<br>
+                    <a style="color:blue; text-decoration: underline;" onclick="objShell.run('online.hta')">🌐 Online Tweaks</a>
+                </td>
+                <td class="col2">
+                    <h2>
+                        Modify the SHELL application:<br>
+                        <h3 style="color: red;">WARNING!!! MODIFY THE SHELL APPLICATION CAN STOP THE GOOD WINDOWS WORK!!!</h3>
+                        <h4>The delfaut shell appication is "explorer.exe".</h4>
+                        <script>
+                            function runMod() { 
+                                objShellApp.ShellExecute(".\\tweaks\\Startup\\shell.mod.bat", "", "", "runas", 1);
+                            }
+                        </script>
+                        <button onclick="runMod()">⚙️ Modifier</button><BR>
+                        <script>
+                            function runRep() { 
+                                objShellApp.ShellExecute(".\\tweaks\\Startup\\shell.mod.bat", "Repair", "", "runas", 1);
+                            }
+                        </script>
+                        <button onclick="runRep()">🔧 Réparer</button>
+                    </h2>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>
