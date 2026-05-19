@@ -10,9 +10,12 @@
         <link href="css/style.css" rel="stylesheet"> 
         <script src="/API.js"></script>
     </head>     
-    <body class="pinegrow-ui-helper-relative" style="margin: 0;">
-        <div class="bar" id="bar"></div>
+    <body style="margin: 0;">
+        <div id="bar"></div>
         <script>XHTTPReq("bar", "/bar.htm")</script>
-        <div data-empty-placeholder style="display:grid;grid-template-columns:250px 1fr;grid-template-areas:'bar section';grid-template-rows:100vh;"></div>
+        <div id="content">
+            <div id="sidebar"></div>
+            <div id="content"></div>
+        </div>
     </body>     
 </html>
