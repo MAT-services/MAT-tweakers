@@ -1,9 +1,9 @@
 @echo off
 chcp 65001 >nul
-@title MAT tweakers - Modify the shell application.
+@title MAT tweakers - Edit the shell application.
 if "%1"=="Repair" goto repair
 :s
-echo /!\ WARNING!!! MODIFY THE SHELL APPLICATION CAN STOP THE GOOD WINDOWS WORK!!! Entrez "ok" pour confirmer!
+echo /!\ WARNING!!! MODIFY THE SHELL APPLICATION CAN STOP WINDOWS WORKING CORRECTLY !!! Type "ok" to confirm!
 set /p "INPUT="
 if NOT "%INPUT%"=="ok" goto s
 set /P "INPUT2=New shell application:"
@@ -17,7 +17,7 @@ pause
 exit 
 
 :repair 
-echo /!\ ATTENTION: Réparer le shell de l'ordinateur va écrasser le shell existant! Entrez "ok" pour confirmer!
+echo /!\ WARNING: Reinstall the delfaut shell will erase the configured shell ! Type "ok" to confirm!
 set /p "INPUT="
 if NOT "%INPUT%"=="ok" goto repair 
 echo Output:
